@@ -1,24 +1,22 @@
 /* styling of the item list */
 
 .item {
-  padding: 0.5rem 0 0 0;
+  padding: 1rem 0 1rem 0;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   display: grid;
-  grid-template-columns: 50% 1fr 1fr;
+  grid-template-columns: 60% 1fr 1fr;
 }
 
 /* edit/delete buttons styling */
 .btn-wrapper {
-  margin-top: 0rem;
-  margin-bottom: 0.5rem;
   justify-content: end;
 }
 
 .btn {
-  width: 100px;
+  width: 80px;
   height: 2rem;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   margin-top: 0;
 }
 
@@ -122,4 +120,39 @@ transform: scale(1);
 [type="checkbox"]:checked:focus + label:before,
 [type="checkbox"]:not(:checked):focus + label:before {
 border: 2px solid #c48615;
+}
+
+
+/* *********************************** /
+/******* MEDIA QUERIES ***************/
+/* *********************************** /
+
+/* Samsung Galaxy fold */
+@media screen and (min-width: 280px) {
+  .item {
+    display: grid;
+    grid-template-columns: 35% 1fr 1fr;
+  }
+}
+
+/* Samsung Galaxy A52/71 */
+@media screen and (min-width: 412px) {
+  .item {
+    display: grid;
+    grid-template-columns: 40% 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .item {
+    display: grid;
+    grid-template-columns: 55% 1fr 1fr;
+  }
+}
+ /* ipad mini */
+@media screen and (min-width: 768px) {
+  .item {
+    display: grid;
+    grid-template-columns: 60% 1fr 1fr;
+  }
 }
